@@ -3,10 +3,12 @@ let computerScore = 0;
 let playerSelection = null;
 let computerSelection = null;
 
-//Get buttons from doc
+//Get buttons and score displays from doc
 const buttonRock = document.querySelector('#rock');
 const buttonPaper = document.querySelector('#paper');
 const buttonScissors = document.querySelector('#scissors');
+const playerScoreDisplay = document.querySelector('#player-score');
+const computerScoreDisplay = document.querySelector('#computer-score');
 
 //Buttons create player selection
 
@@ -44,6 +46,9 @@ function playRound () {
     } else {
         console.log('Tie!')
     }
+
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
 
     console.log('You chose ' + playerSelection + ' and Computer chose ' + computerSelection)
 }
