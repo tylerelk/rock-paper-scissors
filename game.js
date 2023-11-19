@@ -71,12 +71,12 @@ function playRound () {
 
     gameUpdate.textContent = ('You chose ' + playerSelection + ' and Computer chose ' + computerSelection)
 
-    if (computerScore === 5) {
+    if (computerScore === 3) {
         winner.textContent = 'Computer Wins!';
         playerScore = 0;
         computerScore = 0;
     }
-    if (playerScore === 5) {
+    if (playerScore === 3) {
         winner.textContent = 'You win!';
         playerScore = 0;
         computerScore = 0;

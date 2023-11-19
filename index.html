@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="rock">ROCK</button>
-    <button id="paper">PAPER</button>
-    <button id="scissors">SCISSORS</button>
-    <div id="scoreboard">
-        <div>Player Score:<h1 id="player-score"></h1></div>
-        <div>Computer Score:<h1 id="computer-score"></h1></div>
+    <div id="game-container">
+        <h1>Best of 5!</h1>
+        <div id="button-container">
+            <button id="rock"><img src="rock-svgrepo-com.svg" width="100px" height="auto"><br></button>
+            <button id="paper"><img src="paper-svgrepo-com.svg" width="100px" height="auto"></button>
+            <button id="scissors"><img src="scissors-5-svgrepo-com.svg" width="100px" height="auto"></button>
+        </div>
+        <div id="scoreboard">
+            <div>Player Score:<h1 id="player-score"></h1></div>
+            <div>Computer Score:<h1 id="computer-score"></h1></div>
+        </div>
+        <div id="report"></div>
+        <div id="message"></div>
+        <h1 id="winner"></h1>
     </div>
-    <div id="report"></div>
-    <div id="message"></div>
-    <h1 id="winner"></h1>
 </body>
 </html>
 <script type="text/javascript" src="game.js"></script>

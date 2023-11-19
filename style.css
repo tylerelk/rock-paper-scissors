@@ -1,0 +1,45 @@
+:root {
+    --black: #272727;
+    --blue: #4A6FA5;
+    --yellow: #F9C784;
+    --green: #629677;
+}
+
+body {
+    background: linear-gradient(to right, var(--green), var(--blue));
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+}
+
+#game-container {
+    width: 20vw;
+    height: 80vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+button {
+    width: fit-content;
+    height: auto;
+    padding: 0;
+}
+
+button img:hover {
+    animation: button-hightlight 500ms forwards;
+}
+
+@keyframes button-hightlight {
+    0% {}
+    100% {
+        background-color: var(--yellow);
+        box-shadow: inset 10px;
+    }
+}
+
+#scoreboard {
+    align-self: baseline;
+}
