@@ -8,11 +8,17 @@
 body {
     background: linear-gradient(to right, var(--green), var(--blue));
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1vw;
+}
+
+#title {
+    font-size: 50px;
+    border-bottom: 5px solid #272727;
+    border-radius: 10px;
+    margin-top: 5em;
 }
 
 #game-container {
-    width: 20vw;
+    width: 60vw;
     height: 80vh;
     margin: auto;
     display: flex;
@@ -22,13 +28,29 @@ body {
     gap: 5em;
 }
 
-button {
-    width: fit-content;
-    height: auto;
-    padding: 0;
+#button-container {
+    background: linear-gradient(to left, var(--green), var(--blue));
+    border: 10px solid black;
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
-button img:hover {
+button {
+    width: 10rem;
+    height: 10rem;
+    padding: 0;
+    border-radius: 20px;
+}
+
+#reset {
+    font-size: 20px;
+    width: 10rem;
+}
+
+button:hover {
     animation: button-hightlight 500ms forwards;
 }
 
@@ -41,5 +63,9 @@ button img:hover {
 }
 
 #scoreboard {
-    align-self: baseline;
+    width: 40vw;
+}
+
+#winner {
+    font-size: 4em;
 }

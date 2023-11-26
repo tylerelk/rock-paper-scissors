@@ -12,6 +12,7 @@ const computerScoreDisplay = document.querySelector('#computer-score');
 const roundReport = document.querySelector('#report');
 const gameUpdate = document.querySelector('#message');
 const winner = document.querySelector('#winner');
+const reset = document.querySelector('#reset')
 
 //Buttons create player selection
 
@@ -31,6 +32,10 @@ buttonScissors.addEventListener('click', () => {
     playRound();
 });
 
+reset.addEventListener('click', () => {
+    location.reload();
+})
+
 function playRound () {
     if (
         (playerSelection === 0 && computerSelection === 2) ||
@@ -38,14 +43,14 @@ function playRound () {
         (playerSelection === 2 && computerSelection === 1)
     ) {
         playerScore++;
-        roundReport.textContent = 'You win!';
+        roundReport.textContent = 'Point to Player!';
     } else if (
         (playerSelection === 0 && computerSelection === 1) ||
         (playerSelection === 1 && computerSelection === 2) ||
         (playerSelection === 2 && computerSelection === 0)
     ) {
         computerScore++;
-        roundReport.textContent = 'You lose!';
+        roundReport.textContent = 'Point to Computer!';
     } else {
         roundReport.textContent = 'Tie!';
     }
